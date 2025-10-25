@@ -91,10 +91,10 @@ src/
 
 ## UI of the site
 
-![Homepage Screenshot](screenshots/home.png)
-![Homepage Screenshot](screenshots/Quiz.png)
-![Homepage Screenshot](screenshots/Read.png)
-![Homepage Screenshot](screenshots/Result.png)
+![HOME](Screenshots/home.png)
+![QUIZ](Screenshots/Quiz.png)
+![READ](Screenshots/Read.png)
+![RSULT](Screenshots/Result.png)
 
 ## Contributing
 
