@@ -91,7 +91,7 @@ src/
 
 ## UI of the site
 
-![HOME](Screenshots/home.png)
+![HOME](Screenshots/Home.png)
 ![QUIZ](Screenshots/Quiz.png)
 ![READ](Screenshots/Read.png)
 ![RSULT](Screenshots/Result.png)
