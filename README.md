@@ -89,6 +89,13 @@ src/
 - Video series
 - Wellness podcasts
 
+## UI of the site
+
+![Homepage Screenshot](screenshots/home.png)
+![Homepage Screenshot](screenshots/Quiz.png)
+![Homepage Screenshot](screenshots/Read.png)
+![Homepage Screenshot](screenshots/Result.png)
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
