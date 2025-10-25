@@ -2,15 +2,6 @@
 
 A modern web application built with React and Vite that helps users discover their Ayurvedic body constitution (Prakriti) through an interactive quiz and provides personalized wellness recommendations.
 
-## Features
-
-- **Interactive Prakriti Quiz**: Comprehensive questionnaire to determine your unique body constitution
-- **Dosha Analysis**: Detailed breakdown of Vata, Pitta, and Kapha percentages
-- **Personalized Results**: Custom recommendations based on your dominant dosha
-- **PDF Download**: Generate and download your analysis results
-- **Modern UI/UX**: Responsive design with smooth animations using Framer Motion
-- **Educational Resources**: Access to Ayurvedic wellness tips and resources
-
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
