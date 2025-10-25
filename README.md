@@ -1,4 +1,7 @@
 # Ayurvedic Prakriti Analysis Web Application
+Project Made by: AVINASH SINGH
+En.no : 202303103520104
+DIV: 7D
 
 A modern web application built with React and Vite that helps users discover their Ayurvedic body constitution (Prakriti) through an interactive quiz and provides personalized wellness recommendations.
 
@@ -21,7 +24,7 @@ Before you begin, ensure you have the following installed:
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/AVII-VERSE/ayurvedic-prakriti
 cd ayurvedic-prakriti
 ```
 
