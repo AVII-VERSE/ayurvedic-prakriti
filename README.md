@@ -56,8 +56,6 @@ http://localhost:5174
 - **Routing**: React Router DOM
 - **PDF Generation**: pdf-lib
 - **Form Handling**: React Hook Form
-- **Charts**: Recharts
-- **Icons**: React Icons, Heroicons
 
 ## Project Structure
 
