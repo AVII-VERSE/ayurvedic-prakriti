@@ -1,0 +1,225 @@
+.results-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.results-header {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.results-header h1 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.results-subtitle {
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.results-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 0.8s ease-out;
+}
+
+.dosha-results {
+  margin: 2rem 0;
+}
+
+.dosha-bar-container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.dosha-label {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  margin-right: 1rem;
+}
+
+.dosha-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.vata-icon {
+  color: #8e44ad;
+}
+
+.pitta-icon {
+  color: #e74c3c;
+}
+
+.kapha-icon {
+  color: #16a085;
+}
+
+.dosha-bar {
+  flex: 1;
+  height: 30px;
+  background-color: #f0f0f0;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+.dosha {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
+  color: white;
+  font-weight: bold;
+  transition: width 1s ease-out;
+}
+
+.vata {
+  background: linear-gradient(90deg, #8e44ad 0%, #9b59b6 100%);
+}
+
+.pitta {
+  background: linear-gradient(90deg, #e74c3c 0%, #f39c12 100%);
+}
+
+.kapha {
+  background: linear-gradient(90deg, #16a085 0%, #2ecc71 100%);
+}
+
+.dosha-percentage {
+  position: relative;
+  z-index: 1;
+}
+
+.dominant-dosha {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.dominant-dosha::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid #f9f9f9;
+}
+
+.dominant-dosha h2 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.dosha-name {
+  font-weight: bold;
+}
+
+.dosha-name.vata {
+  color: #8e44ad;
+}
+
+.dosha-name.pitta {
+  color: #e74c3c;
+}
+
+.dosha-name.kapha {
+  color: #16a085;
+}
+
+.dosha-description {
+  line-height: 1.8;
+  color: #555;
+}
+
+.results-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  animation: fadeInUp 0.6s ease-out 0.4s both;
+  position: relative;
+}
+
+.download-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.download-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:active {
+  transform: translateY(0);
+}
+
+.btn-icon {
+  font-size: 1rem;
+}
+
+.download-status {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(46, 204, 113, 0.9);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@media (max-width: 768px) {
+  .results-container {
+    padding: 1rem;
+  }
+  
+  .results-header h1 {
+    font-size: 2rem;
+  }
+  
+  .dosha-label {
+    width: 80px;
+  }
+  
+  .results-actions {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .download-status {
+    bottom: -40px;
+  }
+}

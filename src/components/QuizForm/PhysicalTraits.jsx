@@ -1,13 +1,24 @@
+import React from 'react';
 import { usePrakriti } from '../../context/PrakritiContext';
+import { FaUser, FaDumbbell, FaCut, FaEye } from 'react-icons/fa';
 import '../../styles/FormSection.css';
 
 function PhysicalTraits() {
   const { state, dispatch } = usePrakriti();
 
-  const handleChange = (field, value) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
     dispatch({
       type: 'UPDATE_PHYSICAL',
-      payload: { [field]: value }
+      payload: { [name]: value }
+    });
+  };
+  
+  // Alternative handler for direct name/value pairs
+  const handleDirectChange = (name, value) => {
+    dispatch({
+      type: 'UPDATE_PHYSICAL',
+      payload: { [name]: value }
     });
   };
 
@@ -16,10 +27,15 @@ function PhysicalTraits() {
       <h2>Physical Traits</h2>
       
       <div className="form-group">
-        <label>Skin Type</label>
+        <div className="input-with-icon">
+          <FaUser className="form-icon" />
+          <label>Skin Type</label>
+        </div>
         <select 
+          name="skinType"
           value={state.physicalTraits.skinType || ''} 
-          onChange={(e) => handleChange('skinType', e.target.value)}
+          onChange={handleChange}
+          className="enhanced-select"
         >
           <option value="">Select...</option>
           <option value="dry">Dry</option>
@@ -29,10 +45,15 @@ function PhysicalTraits() {
       </div>
 
       <div className="form-group">
-        <label>Body Build</label>
+        <div className="input-with-icon">
+          <FaDumbbell className="form-icon" />
+          <label>Body Build</label>
+        </div>
         <select 
+          name="bodyBuild"
           value={state.physicalTraits.bodyBuild || ''} 
-          onChange={(e) => handleChange('bodyBuild', e.target.value)}
+          onChange={handleChange}
+          className="enhanced-select"
         >
           <option value="">Select...</option>
           <option value="thin">Naturally thin</option>
@@ -42,10 +63,15 @@ function PhysicalTraits() {
       </div>
 
       <div className="form-group">
-        <label>Hair Type</label>
+        <div className="input-with-icon">
+          <FaCut className="form-icon" />
+          <label>Hair Type</label>
+        </div>
         <select 
+          name="hairType"
           value={state.physicalTraits.hairType || ''} 
-          onChange={(e) => handleChange('hairType', e.target.value)}
+          onChange={handleChange}
+          className="enhanced-select"
         >
           <option value="">Select...</option>
           <option value="dry">Dry and thin</option>
@@ -55,10 +81,15 @@ function PhysicalTraits() {
       </div>
 
       <div className="form-group">
-        <label>Eye Size</label>
+        <div className="input-with-icon">
+          <FaEye className="form-icon" />
+          <label>Eye Size</label>
+        </div>
         <select 
+          name="eyeSize"
           value={state.physicalTraits.eyeSize || ''} 
-          onChange={(e) => handleChange('eyeSize', e.target.value)}
+          onChange={handleChange}
+          className="enhanced-select"
         >
           <option value="">Select...</option>
           <option value="small">Small</option>

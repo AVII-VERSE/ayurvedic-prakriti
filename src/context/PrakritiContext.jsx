@@ -7,8 +7,7 @@ const initialState = {
   mentalTraits: {},
   dailyHabits: {},
   environmentalReactions: {},
-  results: null,
-  reflection: ''
+  results: null
 };
 
 function prakritiReducer(state, action) {
@@ -23,8 +22,6 @@ function prakritiReducer(state, action) {
       return { ...state, environmentalReactions: { ...state.environmentalReactions, ...action.payload } };
     case 'SET_RESULTS':
       return { ...state, results: action.payload };
-    case 'SET_REFLECTION':
-      return { ...state, reflection: action.payload };
     case 'LOAD_STATE':
       return { ...state, ...action.payload };
     default:

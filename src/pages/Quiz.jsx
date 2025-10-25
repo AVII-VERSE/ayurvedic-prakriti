@@ -7,12 +7,14 @@ import MentalTraits from '../components/QuizForm/MentalTraits';
 import DailyHabits from '../components/QuizForm/DailyHabits';
 import EnvironmentalReactions from '../components/QuizForm/EnvironmentalReactions';
 import ProgressBar from '../components/ProgressBar';
+import { FaArrowRight, FaArrowLeft, FaClipboardCheck } from 'react-icons/fa';
 import '../styles/Quiz.css';
+import '../styles/FormSection.css';
 
 function Quiz() {
   const [currentStep, setCurrentStep] = useState(1);
   const navigate = useNavigate();
-  const { state } = usePrakriti();
+  const { state, dispatch } = usePrakriti();
 
   const totalSteps = 4;
 
@@ -47,9 +49,27 @@ function Quiz() {
 
   return (
     <div className="quiz-container">
+      <div className="quiz-header">
+        <h1>Discover Your Prakriti</h1>
+        <p className="quiz-description">
+          Answer the following questions about your natural tendencies and traits.
+          Choose the option that best describes you throughout your life, not just currently.
+        </p>
+      </div>
+
       <ProgressBar currentStep={currentStep} totalSteps={totalSteps} />
       
       <div className="quiz-form">
+        <div className="quiz-step-indicator">
+          <span className="step-number">{currentStep}</span>
+          <span className="step-title">
+            {currentStep === 1 && 'Physical Traits'}
+            {currentStep === 2 && 'Mental Traits'}
+            {currentStep === 3 && 'Daily Habits'}
+            {currentStep === 4 && 'Environmental Reactions'}
+          </span>
+        </div>
+
         {renderStep()}
       </div>
 
@@ -59,14 +79,16 @@ function Quiz() {
             className="btn-secondary" 
             onClick={handlePrevious}
           >
-            Previous
+            <FaArrowLeft className="btn-icon" />
+            <span>Previous</span>
           </button>
         )}
         <button 
           className="btn-primary" 
           onClick={handleNext}
         >
-          {currentStep === totalSteps ? 'See Results' : 'Next'}
+          <span>{currentStep === totalSteps ? 'See Results' : 'Next'}</span>
+          {currentStep === totalSteps ? <FaClipboardCheck className="btn-icon" /> : <FaArrowRight className="btn-icon" />}
         </button>
       </div>
     </div>
