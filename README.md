@@ -78,7 +78,7 @@ src/
 - Video series
 - Wellness podcasts
 
-## UI of the site
+## Preview of the site
 
 ![HOME](Screenshots/Home.png)
 ![QUIZ](Screenshots/Quiz.png)
